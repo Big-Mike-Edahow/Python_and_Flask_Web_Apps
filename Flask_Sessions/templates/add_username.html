@@ -1,0 +1,26 @@
+<!-- add_username.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+ 
+{% block content %}
+
+<div class="container">
+    <h1>Enter Your Username👇</h1>
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <label class="form-label" for="name">Username</label>
+            <input class="form-control" id="name" name="username" type="text">
+        </div>
+        <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+</div>
+<br>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session['message'] }}
+    <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+</div>
+
+{% endblock %}

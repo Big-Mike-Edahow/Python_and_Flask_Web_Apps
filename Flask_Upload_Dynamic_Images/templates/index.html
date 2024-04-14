@@ -1,0 +1,43 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <title>Flask-Upload Dynamic Images</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flask Upload Dynamic Images! 🏗️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About 🛈</a>
+        </nav>
+    </header>
+    <main>
+        <div class="center">
+            <h1>Flask Dynamic Image Uploader! 📸</h1>
+            <br>
+            <hr class="center"><br>
+            <div class="center">
+                <form action="{{ url_for('index') }}" enctype="multipart/form-data" method="POST">
+                    <input name="img" type="file" />
+                    <input type="submit" />
+                </form>
+
+                {% if img %}
+                <h3>Rendered Image</h3>
+                <img src="{{img}}" width="320px">
+                {% else %}
+                <h3>Image will be rendered here...</h3>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

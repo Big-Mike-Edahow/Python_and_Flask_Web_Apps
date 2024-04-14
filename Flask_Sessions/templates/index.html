@@ -1,0 +1,39 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+
+
+    <div class="card-container">
+        <br>
+        <h1>Welcome To Geek Python! 🤓🐍</h1>
+        {% if session['user'] %}
+        <h3>Hi🖐, {{ session['user'] }}!👤</h3>
+        <div class="my-3">
+            <a class="btn btn-info mb-3" href="{{ url_for('remove_username') }}">Log out</a>
+        </div>
+        {% else %}
+        <h3>Please Register First. 🖋️</h3>
+        <a class="btn btn-info mb-3" href="{{ url_for('add_username') }}">Register</a>
+        {% endif %}
+    </div>
+    {% if not session['user'] %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session['notify'] }}
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session['greet'] }}
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+    </div>
+    {% endif %}
+</main>
+
+{% endblock %}

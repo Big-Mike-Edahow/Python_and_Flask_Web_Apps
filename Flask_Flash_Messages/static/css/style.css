@@ -1,0 +1,23 @@
+/* style.css */
+
+body {
+    background-color: thistle;
+}
+
+header {
+    height: 150px;
+    background-color: mediumturquoise;
+}
+
+header h1 {
+    margin-left: 15px;
+}
+
+header ul li a {
+    color: black
+}
+
+main {
+    margin-top: 15px;
+    margin-left: 15px;
+}

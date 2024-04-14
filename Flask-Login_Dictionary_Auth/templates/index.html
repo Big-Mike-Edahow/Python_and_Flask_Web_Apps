@@ -1,0 +1,41 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flask-Login! 🖊️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About 🛈</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="center">
+            <h1 class="gfg">Welcome To Flask-Login! 🖊️</h1>
+            <br>
+            <h3 class="strong"> {{info}} </h3>
+            <br>
+            <form action="/login_form" method="post">
+                <label for="username"><strong>Username:</strong></label><br>
+                <input type="text" name='username'>
+                <br>
+                <label for="password"><strong>Password:</strong></label><br>
+                <input type="password" name='password'>
+                <br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

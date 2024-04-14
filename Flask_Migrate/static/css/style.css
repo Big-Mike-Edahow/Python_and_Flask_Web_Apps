@@ -1,0 +1,156 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(209, 158, 231);
+}
+
+main {
+    margin-top: 30px;
+}
+
+header {
+    display: flex;
+    flex: 100%;
+    height: 100px;
+    background-color: rgb(226, 164, 164);
+    border: 2px solid black;
+}
+
+header h1 {
+    display: flex;
+    flex: 70%;
+    justify-content: left;
+    align-items: left;
+    margin-left: 15px;
+    color: black;
+    position: relative;
+    top: 25px;
+}
+
+header nav {
+    display: flex;
+    flex: 30%;
+    justify-content: right;
+    align-items: right;
+ }
+
+ header nav a {
+    font-size: 1.2em;
+    margin-top: 25px;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+ }
+
+ .hero-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.headline-h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.headline-hr {
+    height: 6px;
+    color: black;
+    background-color: black;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-vehicle-button {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: black;
+    background-color: rgb(228, 137, 155);
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+img {
+    border: 5px solid black;
+}
+
+figcaption {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+table {
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+th {
+    border: 2px solid black;
+    font-size: 1.2em;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+td, tr {
+    border: 2px solid black;
+    font-size: 1.2em;
+    background-color: aquamarine;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.add-vehicle-container {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(135, 228, 197);
+    font-size: 1.2em;
+    font-weight: 700;
+    border: 5px solid black;
+    width: 700px;
+    padding: 20px;
+}
+
+.text-field {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px;
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: .5em;
+}
+
+.button {
+    font-size: 1.2em;
+    background-color: rgb(186, 141, 228);
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: .5em;
+    width: 200px;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+

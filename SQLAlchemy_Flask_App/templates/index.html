@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flask-SQLAlchemy and Flask-Migrate! 🗄️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About ❓</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-container">
+            <figure>
+                <img src="../static/images/Flask_Web_Development.png" alt="Flask Web Developmet" width="320px">
+            </figure>
+            <br>
+            <hr><br>
+        </section>
+        <section class="main-container">
+            <h2>User Profiles 👤</h2>
+            <br>
+            <a id="add-profile" href="{{ url_for('add_data') }}">Add Profile 🖊️</a>
+            <br><br>
+            <div class="center">
+                <table class="center">
+                    <thead>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                    </thead>
+                    {% for data in profiles %}
+                    <tbody>
+                        <td>{{data.id}}</td>
+                        <td>{{data.first_name}}</td>
+                        <td>{{data.last_name}}</td>
+                        <td>{{data.age}}</td>
+                        <td><a style="text-decoration: none" href="/delete/{{data.id}}" type="button">Delete ✏️</a></td>
+                    </tbody>
+                    {% endfor%}
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

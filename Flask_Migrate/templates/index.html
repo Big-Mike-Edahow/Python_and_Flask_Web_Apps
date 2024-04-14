@@ -1,0 +1,67 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flask-SQLAlchemy and Flask-Migrate! 🗄️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About ❓</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-container">
+            <figure>
+                <img src="../static/images/Flask-SQLAlchemy.png" alt="Flask-SQLAlchemy" width="320px">
+            </figure><br>
+            <h1 class="headline-h1">🚗🚗 Vehicle Database! 🚗🚗</h1>
+            <br><hr class="headline-hr"><br>
+        </section>
+        <section class="main-container">
+            <div>
+                <a class="add-vehicle-button" href="{{ url_for('add_vehicle') }}">Add Vehicles</a>
+                <br><br>
+            </div>
+            <div>
+                <table class="center">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Vehicle</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Created on</th>
+                    </tr>
+                    </thead>
+                    {% if not details%}
+                    <div class="text-center">
+                        <h3 class="my-5">No Records to Display!</h3>
+                    </div>
+                    {% else %}
+                    <tbody>
+                    {% for data in details %}
+                    <tr>
+                        <th scope="row">{{data.id}}</th>
+                        <td>{{data.name}}</td>
+                        <td>${{data.price}}</td>
+                        <td>{{data.created_at}}</td>
+                        <td><a style="text-decoration: none" href="/delete/{{data.id}}" type="button">Delete ✏️</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                    {% endif %}
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

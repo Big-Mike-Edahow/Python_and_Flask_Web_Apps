@@ -1,0 +1,23 @@
+/* style.css */
+
+body {
+    background-color: honeydew;
+}
+
+header {
+    height: 140px;
+    background-color: #07f3d4;
+}
+
+header h1 {
+    margin-top: 0px;
+    padding: 5px;
+}
+
+header nav ul li a {
+    color: black;
+}
+
+main {
+    margin-left: 15px;
+}

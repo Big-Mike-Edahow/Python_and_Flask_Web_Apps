@@ -1,0 +1,21 @@
+<!-- about.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{% block title %} About {% endblock %}</h1>
+
+<section>
+    <figure>
+        <figcaption>About Big Mike</figcaption>
+        <img src="{{ url_for('static', filename='images/Big_Mike_Peterbilt_Salina.jpg') }}" alt="Big Mike" width="320px">
+    </figure>
+    <article>
+        <p>Big Mike works as a long haul truck driver.<br>
+            His favorite routes to drive are Texas, Nebraska<br>
+            and Iowa.</p>
+    </article>
+</section>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+{%block title %} Home {% endblock %}
+
+{% block content %}
+
+<main>
+    <section class="ui container">
+        <div class="center">
+            <h1 class="ui center aligned header">Big Mike's Todo List! 📝</h1>
+            <br>
+            <hr class="center"><br>
+        </div>
+
+        <div class="center">
+            <form class="ui form" action="/add" method="post">
+                <label for="title"><strong>Todo Title: </strong></label>
+                <input type="text" name="title" placeholder="Enter Todo...">
+                <button class="ui blue button" type="submit">Add</button>
+            </form>
+        </div>
+
+        <br>
+        <hr class="center"><br>
+
+        <div>
+            {% for todo in todo_list %}
+            <div>
+                <p class="center">
+                    <span class="todo-list">
+                        {{todo.id }} | {{ todo.title }}
+                    </span>
+
+                    {% if todo.complete == False %}
+                    <span class="status">Not Complete 🚫</span>
+                    {% else %}
+                    <span class="status">Completed ✔️</span>
+                    {% endif %}
+
+                    <a class="update" href="/update/{{ todo.id }}">Update ✏️</a>
+                    <a class="delete" href="/delete/{{ todo.id }}">Delete 🗑️</a>
+                </p>
+                <br>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}
+
+</html>

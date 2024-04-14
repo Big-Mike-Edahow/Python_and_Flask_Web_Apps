@@ -1,0 +1,25 @@
+<!-- info.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+ 
+{% block content %}
+
+{% include 'message.html' %}
+<div class="container my-5">
+    <form action="/info" method="post">
+        <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" id="name" name="name" type="text">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="profession">Profession</label>
+            <input class="form-control" id="profession" name="profession" type="text">
+        </div>
+        <button class="btn btn-dark" type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

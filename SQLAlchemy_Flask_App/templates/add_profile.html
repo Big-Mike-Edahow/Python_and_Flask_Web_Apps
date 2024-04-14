@@ -1,0 +1,48 @@
+<!-- add_profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" type="text/css" rel="stylesheet">
+    <title>Add User</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flask-SQLAlchemy and Flask-Migrate! 🗄️</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About ❓</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="center">
+                <h1>Add a new user! 🖊️</h1>
+                <br><hr><br>
+            </div>
+        </section>
+        <section class="add-profile">
+            <div>
+                <form action="/add" method="POST">
+                    <label>First Name</label>
+                    <input class="text-field" type="text" name="first_name" placeholder="first name...">
+                    <br>
+                    <label>Last Name</label>
+                    <input class="text-field" type="text" name="last_name" placeholder="last name...">
+                    <br>
+                    <label>Age </label>
+                    <input class="text-field" type="number" name="age" placeholder="age..">
+                    <br><br>
+                    <button class="button" type="submit">Add</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
+

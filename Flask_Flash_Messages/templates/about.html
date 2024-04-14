@@ -1,0 +1,31 @@
+<!-- about.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+<main>
+    <h1>About Big Mike!👷</h1>
+    <section>
+        <figure>
+            <img src="{{ url_for('static', filename='images/Big_Mike_Mayfield.jpg')}}" 
+                    alt="Big Mike" width="320px">
+            <figcaption>Big Mike</figcaption>
+        </figure>
+        <aside>
+            <p>Big Mike works as an Over the Road<br>
+                Truck Driver. He like to drive truck<br>
+                in Texas, Nebraska, Iowa and Missouri.<br>
+                Big Mike likes to travel and take pictures<br>
+                and use his trucking adventures as content<br>
+                for web pages and web apps.
+            </p>
+        </aside>
+    </section>
+</main>
+
+{% endblock %}

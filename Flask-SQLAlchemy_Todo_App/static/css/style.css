@@ -1,0 +1,109 @@
+/* style.css */
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color:rgb(199, 128, 235);
+}
+
+header {
+    display: flex;
+    flex: 100%;
+    height: 100px;
+    background-color:rgb(128, 165, 235);
+    border: 2px solid black;
+}
+
+header h1 {
+    display: flex;
+    flex: 70%;
+    justify-content: left;
+    align-items: left;
+    margin-left: 15px;
+    color: black;
+    position: relative;
+    top: 25px;
+}
+
+header nav {
+    display: flex;
+    flex: 30%;
+    justify-content: right;
+    align-items: right;
+ }
+
+ header nav a {
+    margin-top: 25px;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+ }
+
+main {
+    margin-top: 30px;
+}
+
+hr {
+    width: 700px;
+}
+
+table {
+    width: 500px;
+    border: 5px solid black;
+}
+
+tr, td {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+figure > img {
+    border: 5px solid black;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.todo-list {
+    background-color: rgb(158, 145, 235);
+    color: black;
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 5px;
+    border: 2px solid black;
+    width: 700px;
+}
+
+.update {
+    background-color: rgb(233, 127, 180);
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.delete {
+    background-color: rgb(233, 134, 127);
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.status {
+    background-color: rgb(152, 233, 127);
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+

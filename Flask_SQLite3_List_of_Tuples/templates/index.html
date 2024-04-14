@@ -1,0 +1,68 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>List of Tuples from SQLite3 Table! 🐢</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home 🏡</a>
+            <a href="{{ url_for('about') }}">About ❓</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="center">Band of Brothers Tuple from SQLite3 Table 🐢</h1>
+            <br>
+            <table class="center">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <th>Row 1</th>
+                        <td> {{ band_of_brothers[0][0] }} </td>
+                        <td> {{ band_of_brothers[0][1] }} </td>
+                        <td> {{ band_of_brothers[0][2] }} </td>
+                        <td> {{ band_of_brothers[0][3] }} </td>
+                    </tr>
+                    <tr>
+                        <th>Row 2</th>
+                        <td> {{ band_of_brothers[1][0] }} </td>
+                        <td> {{ band_of_brothers[1][1] }} </td>
+                        <td> {{ band_of_brothers[1][2] }} </td>
+                        <td> {{ band_of_brothers[1][3] }} </td>
+                    </tr>
+                    <tr>
+                        <th>Row 3</th>
+                        <td> {{ band_of_brothers[2][0] }} </td>
+                        <td> {{ band_of_brothers[2][1] }} </td>
+                        <td> {{ band_of_brothers[2][2] }} </td>
+                        <td> {{ band_of_brothers[2][3] }} </td>
+                    </tr>
+                    <tr>
+                        <th>Row 4</th>
+                        <td> {{ band_of_brothers[3][0] }} </td>
+                        <td> {{ band_of_brothers[3][1] }} </td>
+                        <td> {{ band_of_brothers[3][2] }} </td>
+                        <td> {{ band_of_brothers[3][3] }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
